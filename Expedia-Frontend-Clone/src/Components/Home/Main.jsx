@@ -153,30 +153,7 @@ function Main() {
                   <PopoverHeader>Travellers</PopoverHeader>
                   <PopoverCloseButton />
                   <PopoverBody>
-                    {/* <Flex align="center" gap="4" justify="space-between">
-                      <Text>Room</Text>
-                      <HStack w="150px" m={2}>
-                        <Button
-                          id="room"
-                          value={stayData.room}
-                          onClick={(e) => {
-                            onIncrementCounter(e);
-                          }}
-                        >
-                          +
-                        </Button>
-                        <Input m={2} value={stayData.room} readOnly={true} />
-                        <Button
-                          id="room"
-                          value={stayData.room}
-                          onClick={(e) => {
-                            onDecrementCounter(e);
-                          }}
-                        >
-                          -
-                        </Button>
-                      </HStack>
-                    </Flex> */}
+              
                     <Flex align="center" gap="4" justify="space-between">
                       <Text>Adults </Text>
                       <HStack w="150px" m={2}>

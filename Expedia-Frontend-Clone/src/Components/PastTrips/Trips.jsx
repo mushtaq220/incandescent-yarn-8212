@@ -34,21 +34,7 @@ function Trips() {
       setTrips(res.data);
     });
   }, []);
-  // const trips = [
-  //   {
-  //     id: 1,
-  //     hotelId: 1,
-  //     hotelName: "Demo Name",
-  //     userId: 2,
-  //     amount: 500,
-  //     rooms: 4,
-  //     nights: 2,
-  //     bookingDate: "2022-12-12",
-  //     checkinDate: "2022-12-12",
-  //     checkoutDate: "2022-12-12",
-  //     transactionId: "123465789",
-  //   },
-  // ];
+
 
   return (
     <>

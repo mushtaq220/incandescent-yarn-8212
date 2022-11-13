@@ -67,47 +67,6 @@ function ListView() {
   const [isLargerThan492] = useMediaQuery("(min-width: 492px)");
   return (
     <>
-      {/* {isLoading ? (
-        <Flex justify="center" mt={"5"}>
-          <Spinner
-            thickness="5px"
-            speed="0.65s"
-            emptyColor="gray.200"
-            color="#3182ce"
-            size="lg"
-          />
-        </Flex>
-      ) : (
-        <Container maxW="container.xl" mt="3">
-          <Center>
-            <Flex
-              w={isLargerThan768 ? "50%" : "90%"}
-              gap="2"
-              direction="column"
-            >
-              <InputGroup>
-                <InputLeftAddon
-                  children={isLargerThan492 ? "Going to" : "GT"}
-                />
-                <Input placeholder="Enter a location" />
-              </InputGroup>
-              <InputGroup>
-                <InputLeftAddon
-                  children={isLargerThan492 ? "Check-in" : "CI"}
-                />
-                <Input type="date" placeholder="Basic usage" />
-              </InputGroup>
-              <InputGroup>
-                <InputLeftAddon
-                  children={isLargerThan492 ? "Check-out" : "CO"}
-                />
-                <Input type="date" placeholder="Basic usage" />
-              </InputGroup>
-              <Button colorScheme="blue">Search</Button>
-            </Flex>
-          </Center>
-        </Container>
-      )} */}
       <Box w="100%" backgroundColor="#f8f5f4">
         <Container maxW="container.xl">
           <Flex justify="center">
