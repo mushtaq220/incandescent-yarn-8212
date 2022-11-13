@@ -73,17 +73,17 @@ function Navbar() {
     });
   };
 
-  const handleTrip = () => {
-    if (isLoginObj.token !== "") Navigate("/trips");
-    else
-      toast({
-        title: "Please Sign in !!!",
-        status: "info",
-        duration: 2000,
-        isClosable: true,
-        position: "top",
-      });
-  };
+  // const handleTrip = () => {
+  //   if (isLoginObj.token !== "") Navigate("/trips");
+  //   else
+  //     toast({
+  //       title: "Please Sign in !!!",
+  //       status: "info",
+  //       duration: 2000,
+  //       isClosable: true,
+  //       position: "top",
+  //     });
+  // };
   const UserLoginSection = () => {
     return (
       <PopoverContent>
@@ -194,18 +194,18 @@ function Navbar() {
               {isLargerThan1280 ? (
                 <Stack direction="row" spacing={8} align="center" p="1">
                   <Text _hover={{ color: hoverColor }}>
-                    <Link to="/language">
+                    <heading as="h4">
                       <Icon as={BiWorld} w={3.5} h={3.5} />
                       &nbsp; English
-                    </Link>
+                    </heading>
                   </Text>
                   <Text _hover={{ color: hoverColor }}>
-                    <Link to="/support">Support</Link>
+                    {/* <Link to="/support">Support</Link> */}
                   </Text>
                   <Text
                     cursor="pointer"
                     _hover={{ color: hoverColor }}
-                    onClick={() => handleTrip()}
+                    // onClick={() => handleTrip()}
                   >
                     Trips
                   </Text>
@@ -258,7 +258,7 @@ function Navbar() {
                     objectFit="cover"
                     src="https://w7.pngwing.com/pngs/751/12/png-transparent-computer-icons-business-briefcase-suitcase-rectangle-people-suitcase.png"
                     alt="Dan Abramov"
-                    onClick={() => handleTrip()}
+                    // onClick={() => handleTrip()}
                   />
                   <Popover>
                     <PopoverTrigger>

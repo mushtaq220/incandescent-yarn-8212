@@ -36,11 +36,11 @@ function Main() {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
   const [isLargerThan492] = useMediaQuery("(min-width: 492px)");
 
-  const counter = useCounter({
-    max: 10,
-    min: 0,
-    step: 1,
-  });
+  // const counter = useCounter({
+  //   max: 10,
+  //   min: 0,
+  //   step: 1,
+  // });
 
   const Stays = () => {
     const [stayData, setStayData] = useState({
@@ -103,9 +103,9 @@ function Main() {
               value={stayData.city}
               type="text"
               id="city"
-              onChange={(e) => {
-                onChangeInput(e);
-              }}
+              // onChange={(e) => {
+              //   onChangeInput(e);
+              // }}
               placeholder="Enter a location e.g.Goa,Bengaluru,Jammu"
             />
           </InputGroup>
@@ -114,9 +114,9 @@ function Main() {
             <Input
               value={stayData.checkin}
               id="checkin"
-              onChange={(e) => {
-                onChangeInput(e);
-              }}
+              // onChange={(e) => {
+              //   onChangeInput(e);
+              // }}
               type="date"
               placeholder="Basic usage"
             />
@@ -126,16 +126,16 @@ function Main() {
             <Input
               value={stayData.checkout}
               id="checkout"
-              onChange={(e) => {
-                onChangeInput(e);
-              }}
+              // onChange={(e) => {
+              //   onChangeInput(e);
+              // }}
               type="date"
               placeholder="Basic usage"
             />
           </InputGroup>
           <InputGroup>
             <Popover>
-              <PopoverTrigger>
+              {/* <PopoverTrigger>
                 <Button>
                   Travellers :-{" "}
                   {isLargerThan492
@@ -146,46 +146,23 @@ function Main() {
                         stayData.adult + stayData.children
                       }T`}
                 </Button>
-              </PopoverTrigger>
+              </PopoverTrigger> */}
               <Portal>
                 <PopoverContent>
-                  <PopoverArrow />
+                  {/* <PopoverArrow />
                   <PopoverHeader>Travellers</PopoverHeader>
-                  <PopoverCloseButton />
+                  <PopoverCloseButton /> */}
                   <PopoverBody>
-                    {/* <Flex align="center" gap="4" justify="space-between">
-                      <Text>Room</Text>
-                      <HStack w="150px" m={2}>
-                        <Button
-                          id="room"
-                          value={stayData.room}
-                          onClick={(e) => {
-                            onIncrementCounter(e);
-                          }}
-                        >
-                          +
-                        </Button>
-                        <Input m={2} value={stayData.room} readOnly={true} />
-                        <Button
-                          id="room"
-                          value={stayData.room}
-                          onClick={(e) => {
-                            onDecrementCounter(e);
-                          }}
-                        >
-                          -
-                        </Button>
-                      </HStack>
-                    </Flex> */}
+              
                     <Flex align="center" gap="4" justify="space-between">
                       <Text>Adults </Text>
                       <HStack w="150px" m={2}>
                         <Button
                           id="adult"
                           value={stayData.adult}
-                          onClick={(e) => {
-                            onIncrementCounter(e);
-                          }}
+                          // onClick={(e) => {
+                          //   onIncrementCounter(e);
+                          // }}
                         >
                           +
                         </Button>
@@ -193,9 +170,9 @@ function Main() {
                         <Button
                           id="adult"
                           value={stayData.adult}
-                          onClick={(e) => {
-                            onDecrementCounter(e);
-                          }}
+                          // onClick={(e) => {
+                          //   onDecrementCounter(e);
+                          // }}
                         >
                           -
                         </Button>
@@ -207,9 +184,9 @@ function Main() {
                         <Button
                           id="children"
                           value={stayData.children}
-                          onClick={(e) => {
-                            onIncrementCounter(e);
-                          }}
+                          // onClick={(e) => {
+                          //   onIncrementCounter(e);
+                          // }}
                         >
                           +
                         </Button>
@@ -218,7 +195,7 @@ function Main() {
                           value={stayData.children}
                           readOnly={true}
                         />
-                        <Button
+                        {/* <Button
                           id="children"
                           value={stayData.children}
                           onClick={(e) => {
@@ -226,7 +203,7 @@ function Main() {
                           }}
                         >
                           -
-                        </Button>
+                        </Button> */}
                       </HStack>
                     </Flex>
                   </PopoverBody>
@@ -237,10 +214,10 @@ function Main() {
         </Flex>
         <Button
           colorScheme="blue"
-          onClick={(e) => {
-            console.log(stayData);
-            redirect(e);
-          }}
+          // onClick={(e) => {
+          //   console.log(stayData);
+          //   redirect(e);
+          // }}
         >
           Search
         </Button>
@@ -255,7 +232,7 @@ function Main() {
           flexWrap="wrap"
           justify="space-between"
           gap="2"
-          w={isLargerThan768 ? "50%" : "90%"}
+          // w={isLargerThan768 ? "50%" : "90%"}
         >
           <InputGroup>
             <InputLeftAddon
@@ -264,15 +241,15 @@ function Main() {
             <Input placeholder="Enter a location" />
           </InputGroup>
           <InputGroup>
-            <InputLeftAddon children={isLargerThan492 ? "Going to" : "GT"} />
+            {/* <InputLeftAddon children={isLargerThan492 ? "Going to" : "GT"} /> */}
             <Input placeholder="Enter a location" />
           </InputGroup>
           <InputGroup>
-            <InputLeftAddon children={isLargerThan492 ? "Check-in" : "CI"} />
+            {/* <InputLeftAddon children={isLargerThan492 ? "Check-in" : "CI"} /> */}
             <Input type="date" placeholder="Basic usage" />
           </InputGroup>
           <InputGroup>
-            <InputLeftAddon children={isLargerThan492 ? "Check-out" : "CO"} />
+            {/* <InputLeftAddon children={isLargerThan492 ? "Check-out" : "CO"} /> */}
             <Input type="date" placeholder="Basic usage" />
           </InputGroup>
         </Flex>
@@ -288,21 +265,21 @@ function Main() {
           flexWrap="wrap"
           justify="space-between"
           gap="2"
-          w={isLargerThan768 ? "50%" : "90%"}
+          // w={isLargerThan768 ? "50%" : "90%"}
         >
           <InputGroup>
-            <InputLeftAddon children={isLargerThan492 ? "Pick-up" : "PL"} />
+            {/* <InputLeftAddon children={isLargerThan492 ? "Pick-up" : "PL"} /> */}
             <Input placeholder="Enter a location" />
           </InputGroup>
           <InputGroup>
             <InputLeftAddon
-              children={isLargerThan492 ? "Pick-up date" : "PD"}
+              // children={isLargerThan492 ? "Pick-up date" : "PD"}
             />
             <Input type="date" />
           </InputGroup>
           <InputGroup>
             <InputLeftAddon
-              children={isLargerThan492 ? "Drop-off date" : "DD"}
+              // children={isLargerThan492 ? "Drop-off date" : "DD"}
             />
             <Input type="date" placeholder="Basic usage" />
           </InputGroup>
@@ -319,24 +296,24 @@ function Main() {
           flexWrap="wrap"
           justify="space-between"
           gap="2"
-          w={isLargerThan768 ? "50%" : "90%"}
+          // w={isLargerThan768 ? "50%" : "90%"}
         >
           <InputGroup>
             <InputLeftAddon
-              children={isLargerThan492 ? "Leaving from" : "LF"}
+              // children={isLargerThan492 ? "Leaving from" : "LF"}
             />
             <Input placeholder="Enter a location" />
           </InputGroup>
           <InputGroup>
-            <InputLeftAddon children={isLargerThan492 ? "Going to" : "GT"} />
+            {/* <InputLeftAddon children={isLargerThan492 ? "Going to" : "GT"} /> */}
             <Input placeholder="Enter a location" />
           </InputGroup>
           <InputGroup>
-            <InputLeftAddon children={isLargerThan492 ? "Check-in" : "CI"} />
+            {/* <InputLeftAddon children={isLargerThan492 ? "Check-in" : "CI"} /> */}
             <Input type="date" placeholder="Basic usage" />
           </InputGroup>
           <InputGroup>
-            <InputLeftAddon children={isLargerThan492 ? "Check-out" : "CO"} />
+            {/* <InputLeftAddon children={isLargerThan492 ? "Check-out" : "CO"} /> */}
             <Input type="date" placeholder="Basic usage" />
           </InputGroup>
         </Flex>
@@ -352,7 +329,7 @@ function Main() {
           borderBottom: "2px solid blue",
           color: hoverColor,
         }}
-        _hover={{ borderBottom: "1px solid blue", color: hoverColor }}
+        // _hover={{ borderBottom: "1px solid blue", color: hoverColor }}
       >
         {name}
       </Tab>
@@ -392,7 +369,7 @@ function Main() {
                 <Flex
                   flexWrap="wrap"
                   justify="center"
-                  gap={isLargerThan768 ? "2" : null}
+                  // gap={isLargerThan768 ? "2" : null}
                 >
                   <TabSection name={"Stays"} />
                   <TabSection name={"Flights"} />
