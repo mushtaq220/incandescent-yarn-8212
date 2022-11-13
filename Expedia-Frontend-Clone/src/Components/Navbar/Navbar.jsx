@@ -89,31 +89,19 @@ function Navbar() {
       <PopoverContent>
         <PopoverArrow />
         <PopoverCloseButton />
-        <PopoverBody>
-          <Text mt={5}>Members can access discounts and special features</Text>
-          <Button
-            mt={5}
-            w="100%"
-            colorScheme="blue"
-            onClick={() => Navigate("/signin")}
-          >
-            Sign in
-          </Button>
-          <Link to="/signup" mt={5}>
-            <Text _hover={{ color: hoverColor }}>Create a free account</Text>
-          </Link>
-          <Link mt={5} to="/favourite">
-            <Text _hover={{ color: hoverColor }}>Lists of favourites</Text>
-          </Link>
-          <Link to="/rewards" mt={5}>
-            <Text _hover={{ color: hoverColor }}>Expedia rewards</Text>
-          </Link>
-        </PopoverBody>
-        <PopoverFooter>
-          <Link to="/feedback" mt={5}>
-            <Text _hover={{ color: hoverColor }}>Feedback</Text>
-          </Link>
-        </PopoverFooter>
+
+        <Text mt={5}>Members can access discounts and special features</Text>
+        <Button
+          mt={5}
+          w="100%"
+          colorScheme="blue"
+          onClick={() => Navigate("/signin")}
+        >
+          Sign in
+        </Button>
+        <Link to="/signup" mt={5}>
+          <Text _hover={{ color: hoverColor }}>Create a free account</Text>
+        </Link>
       </PopoverContent>
     );
   };
@@ -130,11 +118,6 @@ function Navbar() {
             <Heading as="h6" size="xs">
               {isLoginObj.user.email}
             </Heading>
-          </Center>
-          <Center mb="2">
-            <Tag variant="solid" colorScheme="blue">
-              Blue Member
-            </Tag>
           </Center>
         </PopoverHeader>
         <PopoverBody>
