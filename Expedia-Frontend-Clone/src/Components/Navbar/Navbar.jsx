@@ -87,9 +87,6 @@ function Navbar() {
   const UserLoginSection = () => {
     return (
       <PopoverContent>
-        <PopoverArrow />
-        <PopoverCloseButton />
-
         <Text mt={5}>Members can access discounts and special features</Text>
         <Button
           mt={5}
@@ -108,8 +105,6 @@ function Navbar() {
   const SignInSignOutSection = () => {
     return (
       <PopoverContent>
-        <PopoverArrow />
-        <PopoverCloseButton />
         <PopoverHeader>
           <Center mb="2">
             <Heading size="md">Hi, {isLoginObj.user.firstName}</Heading>
@@ -120,13 +115,6 @@ function Navbar() {
             </Heading>
           </Center>
         </PopoverHeader>
-        <PopoverBody>
-          <Link to="/account">Account</Link>
-          <br />
-          <Link to="/favourite">Lists of favourites</Link>
-          <br />
-          <Link to="/feedback">Feedback</Link>
-        </PopoverBody>
         <PopoverFooter>
           <Center>
             <Button
@@ -173,34 +161,17 @@ function Navbar() {
                     </MenuButton>
                     <Portal>
                       <MenuList>
-                        <MenuItem
-                          _hover={{ color: hoverColor }}
-                          icon={<BsBuilding />}
-                        >
+                        <MenuItem _hover={{ color: hoverColor }}>
                           Stays
                         </MenuItem>
-                        <MenuItem
-                          _hover={{ color: hoverColor }}
-                          icon={<MdOutlineFlight />}
-                        >
+                        <MenuItem _hover={{ color: hoverColor }}>
                           Flights
                         </MenuItem>
-                        <MenuItem
-                          _hover={{ color: hoverColor }}
-                          icon={<FaCarSide />}
-                        >
-                          Cars
-                        </MenuItem>
-                        <MenuItem
-                          _hover={{ color: hoverColor }}
-                          icon={<VscMultipleWindows />}
-                        >
+                        <MenuItem _hover={{ color: hoverColor }}>Cars</MenuItem>
+                        <MenuItem _hover={{ color: hoverColor }}>
                           Packages
                         </MenuItem>
-                        <MenuItem
-                          _hover={{ color: hoverColor }}
-                          icon={<MdOutlineHolidayVillage />}
-                        >
+                        <MenuItem _hover={{ color: hoverColor }}>
                           Holiday activities
                         </MenuItem>
                         <MenuItem _hover={{ color: hoverColor }}>
